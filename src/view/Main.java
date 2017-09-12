@@ -13,6 +13,6 @@ public class Main{
         autoList.add(new Auto("Model 3", null, "yellow", 30));
         autoList.add(new Auto("Model 4", null, "white", 40));
 
-        SaleManager.orderByCost(autoList);
+        SaleManager.orderByMinCost(autoList);
     }
 }

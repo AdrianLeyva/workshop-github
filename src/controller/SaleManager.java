@@ -20,7 +20,7 @@ public class SaleManager{
         System.out.println("The total cost is: $" + cost);
     }
     
-    public static void orderByCost(ArrayList<Auto> auto){
+    public static void orderByMinCost(ArrayList<Auto> auto){
         bubbleSort(auto);
         
         for(Auto i : auto){
@@ -38,7 +38,7 @@ public class SaleManager{
             j++;
             for (int i = 0; i < arr.size() - j; i++) {  
                 
-                  if (arr.get(i).getTotalCost() < arr.get(i + 1).getTotalCost()) {                          
+                  if (arr.get(i).getTotalCost() > arr.get(i + 1).getTotalCost()) {                          
                         tmp = arr.get(i);
                         arr.set(i, arr.get(i + 1));
                         arr.set(i + 1, tmp);

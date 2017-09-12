@@ -6,7 +6,7 @@ public class Auto{
 
     private String model;
     private ArrayList<Wheel> wheels;
-    private String color;
+    private int color;
     private double cost;
 
     public Auto(String model, double cost){
@@ -14,7 +14,7 @@ public class Auto{
         this.cost = cost;
     }
 
-    public Auto(String model, ArrayList<Wheel> wheels, String color, double cost) {
+    public Auto(String model, ArrayList<Wheel> wheels, int color, double cost) {
         this.model = model;
         this.wheels = wheels;
         this.color = color;
@@ -37,11 +37,11 @@ public class Auto{
         this.wheels = wheels;
     }
 
-    public String getColor() {
+    public int getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(int color) {
         this.color = color;
     }
 

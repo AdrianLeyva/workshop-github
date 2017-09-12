@@ -21,14 +21,22 @@ public class SaleManager{
     }
     
     public static void orderByMinCost(ArrayList<Auto> auto){
-        bubbleSort(auto);
+        bubbleSortMin(auto);
         
         for(Auto i : auto){
             System.out.println("Cost: $" + i.getTotalCost());
         }
     }
     
-    private static void bubbleSort(ArrayList<Auto> arr) {
+    public static void orderByMaxCost(ArrayList<Auto> auto){
+        bubbleSortMax(auto);
+        
+        for(Auto i : auto){
+            System.out.println("Cost: $" + i.getTotalCost());
+        }
+    }
+    
+    private static void bubbleSortMin(ArrayList<Auto> arr) {
       boolean swapped = true;
       int j = 0;
       Auto tmp;
@@ -39,6 +47,27 @@ public class SaleManager{
             for (int i = 0; i < arr.size() - j; i++) {  
                 
                   if (arr.get(i).getTotalCost() > arr.get(i + 1).getTotalCost()) {                          
+                        tmp = arr.get(i);
+                        arr.set(i, arr.get(i + 1));
+                        arr.set(i + 1, tmp);
+                        swapped = true;
+                  }
+            }                
+      }  
+    }
+    
+    
+    private static void bubbleSortMax(ArrayList<Auto> arr) {
+      boolean swapped = true;
+      int j = 0;
+      Auto tmp;
+      
+      while (swapped) {
+            swapped = false;
+            j++;
+            for (int i = 0; i < arr.size() - j; i++) {  
+                
+                  if (arr.get(i).getTotalCost() < arr.get(i + 1).getTotalCost()) {                          
                         tmp = arr.get(i);
                         arr.set(i, arr.get(i + 1));
                         arr.set(i + 1, tmp);

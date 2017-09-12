@@ -9,8 +9,9 @@ public class Auto{
     private String color;
     private double cost;
 
-    public Auto(){
-
+    public Auto(String model, double cost){
+        this.model = model;
+        this.cost = cost;
     }
 
     public Auto(String model, ArrayList<Wheel> wheels, String color, double cost) {
